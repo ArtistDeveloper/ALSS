@@ -1,6 +1,6 @@
 # ALSS 알쓰(알고리즘쓰터디)
 
-[코딩테스트 대비 문제집](https://github.com/tony9402/baekjoon)
+[코딩테스트 대비 문제집](https://github.com/tony9402/baekjoon)<br/>
 [스터디 시스템 참고한 곳](https://github.com/PeopleAndService/AlgorithmStudy)
 
 ## 스터디 1차 기간 21.06 ~ 21.09
@@ -17,4 +17,3 @@
 - 사용 언어: C++
 - IDE: Visual Studio
 - 파일명: 문제 번호 or 문제 이름.cpp
-
