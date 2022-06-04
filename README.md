@@ -13,8 +13,8 @@
 - 코딩 중에 라이브러리, 내장 함수 사용한 것 공유하기
 - 매주 2문제씩 풀기
 
-### 환경
-사용 언어: C++
-IDE: Visual Studio
-파일명: 문제 번호 or 문제 이름.cpp
+### :speech_balloon: 환경
+- 사용 언어: C++
+- IDE: Visual Studio
+- 파일명: 문제 번호 or 문제 이름.cpp
 
