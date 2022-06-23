@@ -83,11 +83,6 @@ int main()
 
 	cin >> n;
 
-	//redefine_push_back(dq, 1);
-	//redefine_push_front(dq, 2);
-	//redefine_front(dq);
-	//redefine_back(dq);
-
 	for (int i = 0; i < n; i++)
 	{
 		cin >> oper;
