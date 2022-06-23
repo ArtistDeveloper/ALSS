@@ -4,97 +4,130 @@
 
 using namespace std;
 
+void redefine_push_front(deque<int>& dq, int value)
+{
+	dq.push_front(value);
+}
+
+void redefine_push_back(deque<int>& dq, int value)
+{
+	dq.push_back(value);
+}
+
+void pop_front(deque<int>& dq)
+{
+	if (!dq.empty())
+	{
+		cout << dq.front() << '\n';
+		dq.pop_front();
+	}
+	else
+	{
+		cout << -1 << '\n';
+	}
+}
+
+void pop_back(deque<int>& dq)
+{
+	if (!dq.empty())
+	{
+		cout << dq.back() << '\n';
+		dq.pop_back();
+	}
+	else
+	{
+		cout << -1 << '\n';
+	}
+}
+
+void size(deque<int>& dq)
+{
+	cout << dq.size() << '\n';
+}
+
+void empty(deque<int>& dq)
+{
+	cout << dq.empty() << '\n';
+}
+
+void redefine_front(deque<int>& dq)
+{
+	if (!dq.empty())
+	{
+		cout << dq.front() << '\n';
+	}
+	else
+	{
+		cout << -1 << '\n';
+	}
+}
+
+void redefine_back(deque<int>& dq)
+{
+	if (!dq.empty())
+	{
+		cout << dq.back() << '\n';
+	}
+	else
+	{
+		cout << -1 << '\n';
+	}
+}
+
+
 int main()
 {
 	int n, value;
-	string s;
+	string oper;
 	deque<int> dq;
 
 	cin >> n;
 
-	for (int i = 0; i < n; i++) 
+	//redefine_push_back(dq, 1);
+	//redefine_push_front(dq, 2);
+	//redefine_front(dq);
+	//redefine_back(dq);
+
+	for (int i = 0; i < n; i++)
 	{
-		cin >> s;
-		
-		if (s == "push_front")
+		cin >> oper;
+
+		if (oper == "push_front")
 		{
 			cin >> value;
-			dq.push_front(value);
+			redefine_push_front(dq, value);
 		}
-
-		else if (s == "push_back") 
+		else if (oper == "push_back")
 		{
 			cin >> value;
-			dq.push_back(value);
+			redefine_push_back(dq, value);
 		}
-
-		else if (s == "pop_front") 
+		else if (oper == "pop_front")
 		{
-			if (dq.empty()) 
-			{
-				cout << -1 << '\n';
-			}
-			else 
-			{
-				cout << dq.front() << '\n';
-				dq.pop_front();
-			}
+			pop_front(dq);
 		}
-
-		else if (s == "pop_back") {
-			if (dq.empty())
-			{
-				cout << -1 << '\n';
-			}
-			else 
-			{
-				cout << dq.back() << '\n';
-				dq.pop_back();
-			}
-		}
-
-		else if (s == "size") 
+		else if (oper == "pop_back")
 		{
-			cout << dq.size() << '\n';
+			pop_back(dq);
 		}
-
-		else if (s == "empty") 
+		else if (oper == "size")
 		{
-			if (dq.empty())
-			{
-				cout << 1 << '\n';
-			}
-			else
-			{
-				cout << 0 << '\n';
-			}
+			size(dq);
 		}
-
-		else if (s == "front") 
+		else if (oper == "empty")
 		{
-			if (dq.empty())
-			{
-				cout << -1 << '\n';
-			}
-			else
-			{
-				cout << dq.front() << '\n';
-			}
+			empty(dq);
 		}
-
-		else if (s == "back") 
+		else if (oper == "front")
 		{
-			if (dq.empty())
-			{
-				cout << -1 << '\n';
-			}
-			else
-			{
-				cout << dq.back() << '\n';
-			}
+			redefine_front(dq);
+		}
+		else if (oper == "back")
+		{
+			redefine_back(dq);
 		}
 	}
 
-
 	return 0;
 }
+
