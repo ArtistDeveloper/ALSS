@@ -14,7 +14,7 @@ void dfs_recursion(int adj[][NODE_COUNT], int now, bool visited[])
 	{
 		if (adj[now][next] == 0)
 			continue;
-		if (visited[next]) // ´ÙÀ½¿¡ ¹æ¹®ÇÒ °÷ÀÌ ÀÌ¹Ì ¹æ¹®Çß´ø °÷ÀÌ¶ó¸é continue.
+		if (visited[next]) // ë‹¤ìŒì— ë°©ë¬¸í•  ê³³ì´ ì´ë¯¸ ë°©ë¬¸í–ˆë˜ ê³³ì´ë¼ë©´ continue.
 			continue;
 		dfs_recursion(adj, next, visited);
 	}
@@ -48,7 +48,7 @@ void dfs_stack(int adj[][NODE_COUNT], int now, bool visited[])
 			break;
 		}
 
-		// ¹İº¹¹®À» ´Ù µ¹¾Ò´Ù¸é, ±âÁØ³ëµå¿Í °ü·ÃµÈ °÷À» ¸ğµÎ Å½»öÇß´Ù´Â ¶æÀÌ¹Ç·Î popÀ» ÇØÁØ´Ù.
+		// ë°˜ë³µë¬¸ì„ ë‹¤ ëŒì•˜ë‹¤ë©´, ê¸°ì¤€ë…¸ë“œì™€ ê´€ë ¨ëœ ê³³ì„ ëª¨ë‘ íƒìƒ‰í–ˆë‹¤ëŠ” ëœ»ì´ë¯€ë¡œ popì„ í•´ì¤€ë‹¤.
 		if (pop_flag)
 		{
 			stk.pop();
@@ -72,8 +72,6 @@ int main()
 	int start_node = 0;
 
 	//dfs_recursion(adj, start_node, visited);
-
-	//visited[NODE_COUNT] = { false, };
 	dfs_stack(adj, start_node, visited);
 
 	return 0;
