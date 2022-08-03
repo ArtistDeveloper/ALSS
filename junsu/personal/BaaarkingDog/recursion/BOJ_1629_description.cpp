@@ -1,3 +1,29 @@
+//#include <iostream>
+//
+//using namespace std;
+//
+//using ll = long long;
+//
+//// 2의 승수를 구하는 코드
+//ll pow(int a, int b, int m)
+//{
+//	if (b == 1) return a;
+//	ll val = pow(a, b / 2, m);
+//
+//	if (b % 2 == 1) return val * val * a;
+//	return val * val;
+//}
+//
+//int main()
+//{
+//	int a, b, mod;
+//	cin >> a >> b >> mod;
+//
+//	cout << pow(a, b, mod);
+//
+//	return 0;
+//}
+
 #include <iostream>
 
 using namespace std;
@@ -88,11 +114,20 @@ using ll = long long;
 
 ll pow(int a, int b, int m)
 {
-	if (b == 1) return a % m; 
+	/*if (b == 1) return a % m; 
 	ll val = pow(a, b / 2, m);
 
 	if (b % 2 == 1) return (val * val % m) * a % m;
-	return (val * val) % m;
+	return (val * val) % m;*/
+
+	// 수식을 간추려서 좀 더 생략해서 풀자면 이렇게 표현할 수도 있다.
+	if (b == 1) return a % m;
+	ll val = pow(a, b / 2, m);
+
+	val = val * val % m;
+
+	if (b % 2 == 1) return val * a % m;
+	return val;
 }
 
 int main()
