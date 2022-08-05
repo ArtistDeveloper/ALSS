@@ -6,6 +6,7 @@ using namespace std;
 // 2. base condition: 
 // 3. 재귀 식
 
+// 6-a-b = 현재 있는곳도 아니고 그리고 목표지점이 아닌 곳
 void hanoi(int a, int b, int n)
 {
 	if (n == 1)
@@ -15,7 +16,7 @@ void hanoi(int a, int b, int n)
 	}
 
 	hanoi(a, 6 - a - b, n - 1); // n-1개의 원판까지 1번기둥에서 2번기둥으로 옮김
-	cout << a << ' ' << b << '\n'; 
+	cout << a << ' ' << b << '\n';  // 제일 큰 원판을 목표 장대로 옮김
 	hanoi(6 - a - b, b, n - 1);  // n-1개를 2번기둥에서 3번기둥으로 옮김
 }
 
