@@ -1,8 +1,10 @@
 # ALSS 알쓰(알고리즘쓰터디)
 
+### 활용 자료
 [코딩테스트 대비 문제집](https://github.com/tony9402/baekjoon)<br/>
 [바킹독의 실전 알고리즘](https://github.com/encrypted-def/basic-algo-lecture)<br/>
 
+### 시스템 참조
 [스터디 시스템 참고한 곳](https://github.com/PeopleAndService/AlgorithmStudy)
 
 ## 스터디 1차 기간 21.06 ~ 21.09
