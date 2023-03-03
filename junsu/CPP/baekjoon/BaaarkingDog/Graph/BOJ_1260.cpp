@@ -1,5 +1,3 @@
-// vis 체크하는 것에서 어떤 차이가 발생하는지 알아보기
-
 #include <iostream>
 #include <queue>
 #include <stack>
