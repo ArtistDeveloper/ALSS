@@ -16,9 +16,7 @@ int main()
 	}
 
 	int st = 0, en = n - 1;
-	bool findans = false;
 	pair<int, int> ans;
-	sort(arr, arr + n);
 
 	while (st< en)
 	{
