@@ -48,7 +48,17 @@ void run_combi() {
 	combi(-1, b);
 }
 
+void run_combi_for() {
+	for (int i = 0; i < n; i++) {
+		for (int j = i + 1; j < n; j++) {
+			for (int k = j + 1; k < n; k++) {
+				cout << i << " : " << j << " : " << k << '\n';
+			}
+		}
+	}
+}
+
 int main() {
-	run_permu();
+	run_combi_for();
 	return 0;
 }
